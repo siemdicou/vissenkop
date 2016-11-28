@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.html">
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 
     <title>INSTANT - Bootstrap Theme</title>
 
@@ -64,30 +66,13 @@
 			</div><! --/row -->
 	    </div> <!-- /container -->
 	</div><! --/headerwrap -->
-</div><! --/Joeyisgay -->	
+</div>
 	<section id="works"></section>
 	<div class="container">
 		<div class="row centered mt mb">
 			<h1>My Portfolio</h1>
-			
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="http://placehold.it/600x400" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="http://placehold.it/600x400" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="http://placehold.it/600x400" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="http://placehold.it/600x400" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="http://placehold.it/600x400" class="img-responsive"></a>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html"><img src="http://placehold.it/600x400" class="img-responsive"></a>
-			</div>
+				<div id="template_content"></div>
+				
 		</div><! --/row -->
 	</div><! --/container -->
 	
@@ -141,5 +126,21 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+window.addEventListener('load', function() {
+     
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("template_content").innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open("GET", "model/getArticles.php", true);
+        xhttp.send();
+    // var clicked = document.getElementById("").click
+}, false);
+
+
+</script>
     </body>
 </html>

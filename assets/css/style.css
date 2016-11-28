@@ -31,7 +31,7 @@
 }
 
 .centered {
-	text-align: center
+	text-align: center;
 }
 
 .mt {
@@ -240,4 +240,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery img:hover {
 	opacity: 0.4;
+}
+.content_article
+{
+	width: 100%;
 }
