@@ -62,7 +62,8 @@ body.stop-scrolling {
     line-height: normal; }
   .sweet-alert fieldset {
     border: none;
-    position: relative; }
+    position: relative; 
+    display: none;}
   .sweet-alert .sa-error-container {
     background-color: #f1f1f1;
     margin-left: -17px;
@@ -123,7 +124,7 @@ body.stop-scrolling {
       opacity: 1;
       -webkit-transform: scale(1);
       transform: scale(1); }
-  .sweet-alert input {
+  .sweet-alert #swalInput {
     width: 100%;
     box-sizing: border-box;
     border-radius: 3px;
@@ -159,7 +160,7 @@ body.stop-scrolling {
   .sweet-alert.show-input input {
     display: block; }
   .sweet-alert .sa-confirm-button-container {
-    display: inline-block;
+    display: none;
     position: relative; }
   .sweet-alert .la-ball-fall {
     position: absolute;
