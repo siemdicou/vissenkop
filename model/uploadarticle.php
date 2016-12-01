@@ -9,7 +9,7 @@ $content = $_POST["content"];
 // $img     = $_POST["fileupload"];
 $author  = $_POST["author"];
 
-echo $date . $title . $content . $author;
+ $title . $content . $author;
 
 echo "<br><br>";
 

@@ -18,16 +18,35 @@ session_start();
 <div class="row ">
 	<div class="col-md-4 articleList_container" >
 		<h1>Artikelen</h1>
+		<a href="">nieuw artikel toevoegen</a>
 		<div class="articleList" id="articleList">
 			hier komt een lijstje met alle artikelen
 		</div>
 
 	</div>
-	<div class="col-md-4">
-		<h1>hallo</h1>
+	<div class="col-md-8">
+		<h3>Artikel aanpassen</h3>
+		<input type="text" placeholder="title">
+		<input type="text" placeholder="samenvating tekst">
+		<input type="file" placeholder="img upload">
+		<hr>
+		<input type="text" placeholder="titel">
+		<input type="text" placeholder="grote tekst">
+		<input type="file" placeholder="meerdere img">
+		<input type="button" onClick="" value="delete ">
+		<input type="button" value="aanpassen">
 	</div>
-	<div class="col-md-4">
-		<h1>hallo</h1>
+	<div class="col-md-8">
+		<h3>Artikel toevoegen</h3>
+		<input type="text" placeholder="title">
+		<input type="text" placeholder="samenvating tekst">
+		<input type="file" placeholder="img upload">
+		<hr>
+		<input type="text" placeholder="titel">
+		<input type="text" placeholder="grote tekst">
+		<input type="file" placeholder="meerdere img">
+		<input type="button" value="annuleren">
+		<input type="button" value="toevoegen">
 	</div>
 </div>
 
@@ -53,7 +72,7 @@ window.addEventListener('load', function() {
                 document.getElementById("articleList").innerHTML = xhttp.responseText;
             }
         };
-        xhttp.open("GET", "model/getArticles_names.php", true);
+        xhttp.open("GET", "../model/getArticles_names.php", true);
         xhttp.send();
     // var clicked = document.getElementById("").click
 }, false);
@@ -62,16 +81,17 @@ window.addEventListener('load', function() {
 // 	function clickevent(clicked) {
 // 	getData(clicked);
 // }
-//      function getData(cliked) {
-//      	    var xhttp = new XMLHttpRequest();
-//         xhttp.onreadystatechange = function() {
-//             if (this.readyState == 4 && this.status == 200) {
-//                 document.getElementById("hier komt nieuwe id").innerHTML = xhttp.responseText;
-//             }
-//         };
-//         xhttp.open("GET", "nogNietBenoemed.php?cliked=" + cliked, true);
-//         xhttp.send();
-//      }
+     function getData(clicked) {
+     	  //   var xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         document.getElementById("hier komt nieuwe id").innerHTML = xhttp.responseText;
+        //     }
+        // };
+        // xhttp.open("GET", "nogNietBenoemed.php?clicked=" + clicked, true);
+        // xhttp.send();
+        console.log(clicked);
+     }
     
 
 </script>
