@@ -26,10 +26,10 @@ else{
     
 <script type="text/javascript">
 swal({
-    title: "Log In to Continue",
+    title: "Log in to Continue",
     html: true,
     allowEscapeKey:false,
-    text: "<form action='../model/adminlogin.php' method='POST'>Username: <input type='text' name='username'><br><br>Password: <input type='password' name='password'> <Br><Br><input type='submit' name='' class='btn btn-info' value='inloggen'></form> "
+    text: "<form action='../model/adminlogin.php' method='POST'>Username: <input type='text' name='username'><br><br>Password: <input type='password' name='password'><Br><Br><input type='submit' name='' class='btn btn-info' value='inloggen'></form> "
 });
 <?php } ?>
 </script>
