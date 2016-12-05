@@ -49,17 +49,5 @@ echo "Failed to connect to MySQL:
 }
 
 
-// define site path
-define('DIR','http://daley.flowda.nl/');
 
-// define admin site path
-define('DIRADMIN','http://daley.flowda.nl/admin/');
-
-// define site title for top of the browser
-define('SITETITLE','daley');
-
-//define include checker
-define('included', 1);
-
-// include('functions.php');
 ?>
