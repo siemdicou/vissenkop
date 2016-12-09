@@ -2,15 +2,15 @@
 session_start(); 
  if (isset($_SESSION['login_user'])) {
 		?>
-<script type="text/javascript">
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
 
 <script src="../sweetalert-master/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
+
 <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 </head>
 <body>
@@ -18,13 +18,13 @@ session_start();
 <div class="row ">
 	<div class="col-md-4 articleList_container" >
 		<h1>Artikelen</h1>
-		<a href="">nieuw artikel toevoegen</a>
+		<a onclick="makeNew()">nieuw artikel toevoegen</a>
 		<div class="articleList" id="articleList">
 			hier komt een lijstje met alle artikelen
 		</div>
 
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-8" id="edit">
 		<h3>Artikel aanpassen</h3>
 		<input type="text" placeholder="title">
 		<input type="text" placeholder="samenvating tekst">
@@ -36,7 +36,7 @@ session_start();
 		<input type="button" onClick="" value="delete ">
 		<input type="button" value="aanpassen">
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-8" id="add">
 		<h3>Artikel toevoegen</h3>
 		<input type="text" placeholder="title">
 		<input type="text" placeholder="samenvating tekst">
@@ -56,7 +56,7 @@ session_start();
 </body>
 </html>
 <script type="text/javascript">
- swal({
+ swal({ 
     title: "Welkom <?php echo $_SESSION['login_user']?>!",
     html: true,
     timer:1250
@@ -81,18 +81,35 @@ window.addEventListener('load', function() {
 // 	function clickevent(clicked) {
 // 	getData(clicked);
 // }
+	function makeNew() {
+			$("#edit").fadeOut(500);		
+            // $("#add").fadeIn(500);
+            setTimeout(function(){$("#add").fadeIn(500);}, 500);
+};    
+
+
      function getData(clicked) {
-     	  //   var xhttp = new XMLHttpRequest();
-        // xhttp.onreadystatechange = function() {
-        //     if (this.readyState == 4 && this.status == 200) {
-        //         document.getElementById("hier komt nieuwe id").innerHTML = xhttp.responseText;
-        //     }
-        // };
-        // xhttp.open("GET", "nogNietBenoemed.php?clicked=" + clicked, true);
-        // xhttp.send();
+
+     	    
+            $("#add").fadeOut(500);
+            // $("#edit").fadeIn(500);
+
+            setTimeout(function(){$("#edit").fadeIn(500);}, 500);
+            	
+     	 // var xhttp = new XMLHttpRequest();
+       //  xhttp.onreadystatechange = function() {
+       //      if (this.readyState == 4 && this.status == 200) {
+       //          document.getElementById("edit").innerHTML = xhttp.responseText;
+       //          document.getElementById("edit").fadeIn(300);
+       //          document.getElementById("add").fadeOut(300);
+       //      }
+       //  };
+       //  xhttp.open("GET", "nogNietBenoemed.php?clicked=" + clicked, true);
+       //  xhttp.send();
         console.log(clicked);
-     }
-    
+     };
+
+
 
 </script>
 
