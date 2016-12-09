@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 .navbar-brand img{
-    width:100%;
+    width: 120px;
 }
 
 .navbar-default .navbar-brand {
@@ -85,28 +85,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #2222;
+width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 1em;
+  color: #fff;
+  line-height: 120px;
+  text-align: center;
+  background: #000;
+}
+.navbar-default .navbar-nav > li > a:hover{
+	background: grey;
+	color: white;
 }
 .navbar-default .navbar-nav > li{
-    background: rgba(255,255,255,0.7);
+
 }
-
-/* ==========================================================================
-   Wrap Sections
-   ========================================================================== */
 .headercont{
-    background: url(../img/ijmuidenlucht.jpg) no-repeat center top;
-    	background-attachment: relative;
-	background-position: center center;
-        -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+   background: url(../img/wallpaper.png) no-repeat center top;
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+}
+.works{
+	min-height:100vh;
+}
+.works .graatsvg{
+	position:absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
 }
 
 #headerwrap {
@@ -114,11 +122,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
-
-	min-height: 650px;
+	min-height: 40vh;
 	width: 100%;
-	
-
 }
 
 #headerwrap h1 {
@@ -135,6 +140,10 @@ h1, h2, h3, h4, h5, h6 {
 	color: #ffffff
 }
 
+#headerwrap img{
+	width: 35%;
+	height: auto;
+}
 #social {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -164,8 +173,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: 10px;
 }
 .workcont{
-    	background: url(../img/vissenkop.jpg) no-repeat center top;
-    	background-attachment: relative;
+	background: url(../img/vissenkop.jpg) no-repeat center top;
+	background-attachment: relative;
 	background-position: center center;
         -webkit-background-size: 100%;
     -moz-background-size: 100%;
