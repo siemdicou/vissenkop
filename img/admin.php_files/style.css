@@ -1,0 +1,21 @@
+
+.productList
+{
+	width: 100%;
+}
+
+.productList_container{
+	border:1px solid black; 
+	
+
+}
+
+#add{
+
+}
+
+#edit{
+	display: none;
+}
+
+

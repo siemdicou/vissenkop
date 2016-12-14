@@ -13,8 +13,6 @@
 				 	<div class="content_article"><p>'.$row["content"].'</p></div>
 				 	<div class="content_author">'.$row["author"].'</div>
 				 	<div class="content_author">'.$row["date"].'</div>
-
-
 				</a>
 		</div>';}
  ?>
