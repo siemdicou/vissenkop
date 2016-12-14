@@ -24,30 +24,31 @@ session_start();
 		</div>
 
 	</div>
-	<div class="col-md-8" id="edit">
-		<h3>Artikel aanpassen</h3>
-		<input type="text" placeholder="title">
-		<input type="text" placeholder="samenvating tekst">
-		<input type="file" placeholder="img upload">
-		<hr>
-		<input type="text" placeholder="titel">
-		<input type="text" placeholder="grote tekst">
-		<input type="file" placeholder="meerdere img">
-		<input type="button" onClick="" value="delete ">
-		<input type="button" value="aanpassen">
-	</div>
-	<div class="col-md-8" id="add">
+	<?php
+
+
+ echo "
+	<div class='col-md-8' id='add'>
 		<h3>Artikel toevoegen</h3>
-		<input type="text" placeholder="title">
-		<input type="text" placeholder="samenvating tekst">
-		<input type="file" placeholder="img upload">
+		<form method='POST' action='../model/newArticle.php' enctype='multipart/form-data'>
+		<input type='text' placeholder='title' name='smalltitle'>
+		<input type='text' placeholder='samenvating tekst' name='smallsummary'>
+		<input type='file' placeholder='img upload' name='fileupload'>
 		<hr>
-		<input type="text" placeholder="titel">
-		<input type="text" placeholder="grote tekst">
-		<input type="file" placeholder="meerdere img">
-		<input type="button" value="annuleren">
-		<input type="button" value="toevoegen">
+		<input type='text' placeholder='titel' name='bigtitle'>
+		<input type='text' placeholder='grote tekst' name='bigsummary'>
+		<input type='file' placeholder='meerdere img' name='moreimg'>
+
+		<input type='text' placeholder='author' name='author'>
+		<input type='button' value='annuleren'>
+		<input type='submit' value='toevoegen'>
+		</form>
 	</div>
+		<div class='col-md-8' id='edit'>
+		
+		</div>";
+	?>
+
 </div>
 
 
@@ -78,9 +79,9 @@ window.addEventListener('load', function() {
 }, false);
 
 
-// 	function clickevent(clicked) {
-// 	getData(clicked);
-// }
+	function clickevent(clicked) {
+	getData(clicked);
+}
 	function makeNew() {
 			$("#edit").fadeOut(500);		
             // $("#add").fadeIn(500);
@@ -89,23 +90,19 @@ window.addEventListener('load', function() {
 
 
      function getData(clicked) {
-
-     	    
             $("#add").fadeOut(500);
-            // $("#edit").fadeIn(500);
+             $("#edit").fadeIn(500);
 
             setTimeout(function(){$("#edit").fadeIn(500);}, 500);
             	
-     	 // var xhttp = new XMLHttpRequest();
-       //  xhttp.onreadystatechange = function() {
-       //      if (this.readyState == 4 && this.status == 200) {
-       //          document.getElementById("edit").innerHTML = xhttp.responseText;
-       //          document.getElementById("edit").fadeIn(300);
-       //          document.getElementById("add").fadeOut(300);
-       //      }
-       //  };
-       //  xhttp.open("GET", "nogNietBenoemed.php?clicked=" + clicked, true);
-       //  xhttp.send();
+     	  var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("edit").innerHTML = xhttp.responseText;
+             }
+         };
+         xhttp.open("GET", "../model/retrieveArticles.php?clicked=" + clicked, true);
+         xhttp.send();
         console.log(clicked);
      };
 
