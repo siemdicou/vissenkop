@@ -240,6 +240,13 @@ width: 150px;
 
 
 /* Gallery */
+
+
+
+#containercontent {
+/*    float: left;*/
+}
+
 .gallery {
 	margin-top: 30px;
 }
