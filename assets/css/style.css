@@ -100,8 +100,8 @@ width: 150px;
 }
 .headercont{
    background: url(../img/wallpaper2.png) no-repeat center top;
-
 }
+
 .works{
 	min-height:100vh;
 }
@@ -189,11 +189,8 @@ width: 150px;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
-
 	min-height: 650px;
 	width: 100%;
-	
-
 }
 
 #workwrap h1 {
