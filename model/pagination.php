@@ -11,7 +11,7 @@ if (isset($_GET["page_nr"])) {
 $start_from = ($page-1) * $num_rec_per_page;
 
 
-$sql = "SELECT * FROM products LIMIT ".$start_from.",". $num_rec_per_page;
+$sql = "SELECT * FROM vissenkop LIMIT ".$start_from.",". $num_rec_per_page;
 $result = $mysqli->query($sql);
 if($result->num_rows > 0){
     while($rows = $result->fetch_assoc()){
@@ -20,7 +20,7 @@ if($result->num_rows > 0){
 }
 
 // bepaald hoeveel pages erin tottaal zijn
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM vissenkop";
 
 $rs_result = $mysqli->query($sql);
 

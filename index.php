@@ -3,6 +3,7 @@
 // dit include de files die niet via de switch worden geladen op de site.
 include "includes/config.php";
 include "views/header.php";
+
 // include "controller/products.php";
 
 
@@ -20,17 +21,25 @@ $page = (empty($_GET ['page'])) ? '' : $_GET['page'];
 switch($page){
 
     case 'home':
+    include "views/home.php";
         break;
-    case 'producten':
-        break;
-  
-    case'work':
-        include "views/work.php";
-        break;
-    case 'about':
+            case 'about':
         include "views/about.php";
         break;
+   case'works':
+        include "views/work.php";
+        break;
+
+    case 'contact':
+        include "views/contact.php";
+        break;
+    case 'articles':
+        include "views/articles.php";
+        break;
+
+
     default:
+    include "views/home.php";
 
         break;
 }
