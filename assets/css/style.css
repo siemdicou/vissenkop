@@ -74,10 +74,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default {
-	background-color: transparent;
+	background-color: rgba(255,255,255,0.7);
 	border-color: transparent;
 }
+.navbar-default .contactli{
 
+	position:absolute;
+	right: 0;
+	display:table-cell;
+    vertical-align: middle;
+}
+.navbar-default .contactli a{
+	padding: 0;
+	    vertical-align: middle;
+    display: table-cell;
+	}
+.navbar-default .contactli img{
+ 	max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto;
+}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #1abc9c;
 	background-color: transparent;
@@ -102,6 +119,10 @@ width: 150px;
    background: url(../img/wallpaper2.png) no-repeat center top;
 }
 
+.navbar-right{
+	float: left !important;
+}
+
 .works{
 	min-height:100vh;
 }
@@ -124,6 +145,7 @@ width: 150px;
 	text-align:center;
 	min-height: 40vh;
 	width: 100%;
+	position:relative;
 }
 
 #headerwrap h1 {
@@ -133,6 +155,13 @@ width: 150px;
 	letter-spacing: 4px;
 	font-size: 80px;
 	font-weight: bold;
+}
+
+#headerwrap .container:first-child{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 #headerwrap h4 {
