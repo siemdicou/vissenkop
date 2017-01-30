@@ -8,7 +8,6 @@
         echo ' 
    <div class="col-lg-4 col-md-4 col-sm-4 gallery">
 				<a href="work.html">
-                 
 					<img src="uploads/'. $row["img"] . '" class="img-responsive">
                     <div id="containercontent">
                         <h3 class="content_title">'.$row["smalltitle"].'</h3>

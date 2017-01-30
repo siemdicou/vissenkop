@@ -1,3 +1,4 @@
+
 <?php
 // dit include de files die niet via de switch worden geladen op de site.
 include "includes/config.php";
@@ -33,4 +34,4 @@ switch($page){
 
         break;
 }
-
+?>
