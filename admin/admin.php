@@ -7,7 +7,7 @@ session_start();
 <html>
 <head>
 
-<script src="../sweetalert-master/dist/sweetalert.min.js"></script>
+<script src="sweetalert-master/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
 
@@ -33,11 +33,14 @@ session_start();
 		<form method='POST' action='../model/newArticle.php' enctype='multipart/form-data'>
 		<input type='text' placeholder='title' name='smalltitle'>
 		<input type='text' placeholder='samenvating tekst' name='smallsummary'>
-		<input type='file' placeholder='img upload' name='fileupload'>
-		<hr>
+		 <p>single image upload</p>
+        <input type='file' name='filess[]' accept='image/*'>
+        <br>
 		<input type='text' placeholder='titel' name='bigtitle'>
 		<input type='text' placeholder='grote tekst' name='bigsummary'>
-		<input type='file' placeholder='meerdere img' name='moreimg'>
+		 <p>Multiple image upload</p>
+        <input type='file' name='files[]' multiple='multiple' accept='image/*'>
+        <br><br>
 
 		<input type='text' placeholder='author' name='author'>
 		<input type='button' value='annuleren'>
@@ -51,7 +54,8 @@ session_start();
 
 </div>
 
-
+       
+       
 
 
 </body>

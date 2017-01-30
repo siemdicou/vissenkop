@@ -1,35 +1,44 @@
+<?php 
+$id = (empty($_GET ['id'])) ? '' : $_GET['id'];    
+var_dump($id);
 
-
+	$result = $mysqli->query("SELECT * FROM articles WHERE id = '$id'");
+	
+	$row = $result->fetch_assoc();
+	// var_dump($row);
+ 
+echo'
 <div class="workcont">
 	<div id="workwrap">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h4>Gerard Jaapstok</h4>
-					<h1>NOU LAATST HAD IK</h1>
-					<h4>en dit is mijn verhaal</h4>
+					<h1>'.$row['bigtitle'].'</h1>
+					<h4>Beroep: '.$row['beroep'].'</h4>
 				</div>
-			</div><! --/row -->
+			</div><!--/row -->
 	    </div> <!-- /container -->
-	</div><! --/workwrap -->
+	</div><!--workwrap --> 
       </div>	
 	<section id="works"></section>
 	<div class="container">
 		<div class="row centered mt mb">
 			<div class="col-lg-8 col-lg-offset-2">
 				<h4>Verhaal nummero uno</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				<p>'.$row['smallsummary'].'</p>
+				<h4>groot verhaal</h4>
+				<p>'.$row['bigsummary'].'</p>
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 mt">
-				<img class="img-responsive" src="http://placehold.it/2048x1366">
+				<img class="img-responsive" src="uploads/'.$row['img'].'">
 				<br>
-				<img class="img-responsive" src="http://placehold.it/2048x1366">
+				<img class="img-responsive" src="uploads/'.$row['img'].'">
 			</div>
 			<div class="col-lg-8 col-lg-offset-2 mt">
 				<h4>ECHTER TOCH NOG</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				<br>
+				<p>'.$row['datee']. '  ' .$row['author'] .'</p>
 			</div>
-
 		</div><! --/row -->
 	</div><! --/container -->
 	
@@ -85,3 +94,4 @@
     <script src="assets/js/bootstrap.min.js"></script>
     </body>
 </html>
+';?>

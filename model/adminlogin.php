@@ -1,10 +1,9 @@
 <?php
 session_start(); 
 
-include "../includes/config.php";
 
    
-
+include "../includes/config.php";
       
       $myusername = mysqli_real_escape_string($mysqli,$_POST['username']);
       // echo $myusername;
