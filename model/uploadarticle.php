@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 
 REQUIRE "../includes/config.php";
