@@ -120,6 +120,7 @@ width: 150px;
 }
 
 .navbar-right{
+	position: relative;
 	float: left !important;
 }
 
