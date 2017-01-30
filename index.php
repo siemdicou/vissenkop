@@ -16,6 +16,8 @@ include "views/header.php";
 $page = (empty($_GET ['page'])) ? '' : $_GET['page'];
 
 
+
+
 // de switch gebruikt de informatie uit de links van de nav.php
 // om zo de juiste files te include bij de juiste paginalink
 switch($page){
@@ -27,7 +29,8 @@ switch($page){
         include "views/about.php";
         break;
    case'works':
-        include "views/work.php";
+  
+        include "views/work.php" ;
         break;
     case 'contact':
         include "views/contact.php";

@@ -7,7 +7,7 @@
 	while($row = $result->fetch_assoc()) {
         echo ' 
    <div class="col-lg-4 col-md-4 col-sm-4 gallery">
-				<a href="work.html">
+				<a href="index.php?page=works&id='.$row["id"].'">
 					<img src="uploads/'. $row["img"] . '" class="img-responsive">
                     <div id="containercontent">
                         <h3 class="content_title">'.$row["smalltitle"].'</h3>
