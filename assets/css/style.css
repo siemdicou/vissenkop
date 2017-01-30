@@ -87,12 +87,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .navbar-nav > li > a {
 width: 150px;
   height: 150px;
-  border-radius: 50%;
-  font-size: 1em;
-  color: #fff;
   line-height: 120px;
   text-align: center;
-  background: #000;
+  
 }
 .navbar-default .navbar-nav > li > a:hover{
 	background: grey;
@@ -102,9 +99,9 @@ width: 150px;
 
 }
 .headercont{
-   background: url(../img/wallpaper.png) no-repeat center top;
-
+   background: url(../img/wallpaper2.png) no-repeat center top;
 }
+
 .works{
 	min-height:100vh;
 }
@@ -152,11 +149,11 @@ width: 150px;
 
 #social i {
 	font-size: 40px;
-	color: #4a4a4a
+	color: #046662;
 }
 
 #social i:hover {
-	color: #1abc9c
+	color: #da9c06;
 }
 #social>div>div>div{
     display:inline-block;
@@ -192,11 +189,8 @@ width: 150px;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
-
 	min-height: 650px;
 	width: 100%;
-	
-
 }
 
 #workwrap h1 {
@@ -243,15 +237,31 @@ width: 150px;
 
 
 /* Gallery */
+
+
+
+.img-responsive {
+	float: left;
+	margin-right: 21%;
+	max-width: 500px;
+	
+}
+#containercontent {
+   float: left;
+	width: 200px;
+}
+
 .gallery {
 	margin-top: 30px;
+	width: 100%;
 }
 
 .gallery img:hover {
 	opacity: 0.4;
 }
-.content_article
-{
+
+
+.content_article {
 	width: 100%;
 }
 .articleList_container{
