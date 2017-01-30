@@ -7,7 +7,7 @@ session_start();
 <html>
 <head>
 
-<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+<script src="../sweetalert-master/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
 
