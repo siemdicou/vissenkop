@@ -47,7 +47,7 @@
             <li class="active"><a href="index.php?page=home">Home</a></li>
             <li><a href="index.php?page=about">About</a></li>
             <li><a href="index.php?page=works">Works</a></li>
-            <li><a href="index.php?page=contact"><img src="assets/img/contact2.png"/></a></li>
+            <li class="contactli"><a href="index.php?page=contact"><img src="assets/img/contact2.png"/></a></li>
           </ul>
 
         </div><!--/.nav-collapse -->
