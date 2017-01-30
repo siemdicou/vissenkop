@@ -29,12 +29,14 @@ switch($page){
    case'works':
         include "views/work.php";
         break;
-
     case 'contact':
         include "views/contact.php";
         break;
     case 'articles':
         include "views/articles.php";
+        break;
+        case 'admin':
+        include "admin/index.php";
         break;
 
 
