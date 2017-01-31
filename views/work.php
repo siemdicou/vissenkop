@@ -31,8 +31,19 @@ echo'
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 mt">
 				<img class="img-responsive" src="uploads/'.$row['img'].'">
-				<br>
-				<img class="img-responsive" src="uploads/'.$row['img'].'">
+				<br>';
+				$photoarray = unserialize($row["moreimg"]);
+				$countimage = count($photoarray);
+
+				$count = 0;
+					while ($count < $countimage){
+						
+
+						echo "<img src='uploads/" . $photoarray[$count] . "' width='20%'> ";
+
+				$count++;
+					}
+				echo '
 			</div>
 			<div class="col-lg-8 col-lg-offset-2 mt">
 				<h4>ECHTER TOCH NOG</h4>
