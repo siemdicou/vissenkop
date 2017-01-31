@@ -19,7 +19,7 @@ session_start();
 // $bla = isset($_SESSION['login_user']);
 
  if (isset($_SESSION['login_user'])) {
-		header("Location: ../admin/admin.php");
+		header("Location: admin/admin.php");
 	}
 else{
 	?>
@@ -29,7 +29,7 @@ swal({
     title: "Log in to Continue",
     html: true,
     allowEscapeKey:false,
-    text: "<form action='../vissenkop/model/adminlogin.php' method='POST'>Username: <input type='text' name='username'><br><br>Password: <input type='password' name='password'><Br><Br><input type='submit' name='' class='btn btn-info' value='inloggen'></form>"
+    text: "<form action='model/adminlogin.php' method='POST'>Username: <input type='text' name='username'><br><br>Password: <input type='password' name='password'><Br><Br><input type='submit' name='' class='btn btn-info' value='inloggen'></form>"
 });
 <?php } ?>
 </script>
