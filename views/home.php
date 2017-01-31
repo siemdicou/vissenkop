@@ -14,15 +14,18 @@
 
 <section id="works" class="works">
 <img class="graatsvg" src="assets/img/graat.svg" alt="graat">
-
+        <section class="welcome">
+        	<h1>Vissenkoppen</h1>
+        	<div class="overlay"></div>
+        </section>
 	<div class="container">
-        <h1>Vissenkoppen</h1>
+
 		<div class="row centered mt mb">
 		<?php foreach ($list as $row){
         echo ' 
    <div class="col-lg-4 col-md-4 col-sm-4 gallery">
 				<a href="index.php?page=works&id='.$row["id"].'">
-					<img src="uploads/'. $row["img"] . '" class="img-responsive">
+					<div class="imgcont"><img src="uploads/'. $row["img"] . '" class="img-responsive"></div>
                     <div id="containercontent">
                         <h3 class="content_title">'.$row["smalltitle"].'</h3>
                         <div class="content_article"><p>'.$row["smallsummary"].'</p></div>
@@ -36,7 +39,7 @@
 		</div><!--/row -->
 	</div><!--/container -->
 	
-<?php include 'views/pagination.php'; ?>
+<div class="pagincont"><?php include 'views/pagination.php'; ?></div>
 </section>
 	<div id="social">
 		<div class="container">

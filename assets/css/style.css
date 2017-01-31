@@ -225,6 +225,48 @@ width: 150px;
 	color: #f2f2f2;
 	margin-left: 10px;
 }
+
+/* Welcome */
+
+.welcome h1{
+	position: absolute;
+	left:0 ;
+	right:0 ;
+	top: 0;
+	width: 100%;
+	font-size: 3em;
+	text-transform: uppercase;
+	padding-top: 20px;
+	z-index: 999;
+}
+
+.welcome{
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	padding: 2em;
+	min-height: 7em;
+
+}
+
+.welcome .overlay{
+	background: rgba(238,238,238,0.8);
+
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);	
+
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+
+
 .workcont{
 	background: url(../img/vissenkop.jpg) no-repeat center top;
 	background-attachment: relative;
@@ -285,8 +327,6 @@ width: 150px;
 
 	min-height: 550px;
 	width: 100%;
-	
-
 }
 
 
@@ -302,15 +342,16 @@ width: 150px;
 	max-width: 500px;
 }
 .imgcont{
-	width: 300px;
+	width: 420px;
 	height: auto;
 	overflow: hidden;
 	margin:0;
+	float: left;
 
 }
 #containercontent {
    float: right;
-	width: 200px;
+	width: 400px;
 }
 
 .gallery {
@@ -326,6 +367,9 @@ width: 150px;
 .content_article {
 	width: 100%;
 }
+.content_title{
+	text-transform: uppercase;
+}
 .articleList_container{
 	border:1px solid black; 
 
@@ -340,6 +384,31 @@ width: 150px;
 }
 
 
+/* Gallery */
+
+.pagincont{
+position: relative;
+width: 100%;
+height: 4em;
+}
+
+#pagination-whole{
+	display: block;
+	text-align: center;
+	width: 20%;
+	padding: 1em;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
 
 
+}
+#pagination-whole *{
+	color: #4a4a4a ;
+	padding-left: 2em;
+	padding-left: 2em;
+	display: inline-block;
+}
 
