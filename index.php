@@ -14,15 +14,9 @@ include "views/header.php";
 // zodat ze gebruikt kunnen worden in een van de files below
 
 $page = (empty($_GET ['page'])) ? '' : $_GET['page'];
-
-
-
-
-// de switch gebruikt de informatie uit de links van de nav.php
-// om zo de juiste files te include bij de juiste paginalink
 switch($page){
-
     case 'home':
+    require 'model/getArticles.php';
     include "views/home.php";
         break;
             case 'about':
@@ -44,6 +38,7 @@ switch($page){
 
 
     default:
+    require 'model/getArticles.php';
     include "views/home.php";
 
         break;
