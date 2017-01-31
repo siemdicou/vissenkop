@@ -1,5 +1,4 @@
 <?php
-
 include "../includes/config.php";
 
 $datee = date("Ymd");
@@ -100,5 +99,7 @@ $sql = "INSERT INTO articles (smalltitle,smallsummary,img,bigtitle,bigsummary,mo
 VALUES ('$smalltitle','$smallsummary','$newfilename','$bigtitle','$bigsummary','$photos' ,'$datee' ,'$author')";
 
 $result = $mysqli->query($sql);
+
+header("Location: ../admin/admin.php");
 
 ?>

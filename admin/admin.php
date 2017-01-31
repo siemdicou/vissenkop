@@ -24,10 +24,10 @@ session_start();
 		</div>
 
 	</div>
-	<?php
+	
 
 
- echo "
+ 
 	<div class='col-md-8' id='add'>
 		<h3>Artikel toevoegen</h3>
 		<form method='POST' action='../model/newArticle.php' enctype='multipart/form-data'>
@@ -50,7 +50,7 @@ session_start();
 		<div class='col-md-8' id='edit'>
 		
 		</div>";
-	?>
+	
 
 </div>
 
