@@ -3,11 +3,23 @@ include "../includes/config.php";
 
 $datee = date("Ymd");
 
-$smalltitle   	=  $_POST['smalltitle'];
-$smallsummary   =  $_POST['smallsummary']; 
+$smalltitle   	=  $_POST['kleinetitel'];
+$smallsummary   =  $_POST['kleinesamenvatting']; 
 
-$bigtitle   	=  $_POST['bigtitle']; 
-$bigsummary  	=  $_POST['bigsummary'];
+$bigtitle   	=  $_POST['grotetitel']; 
+$bigsummary  	=  $_POST['grotetekst'];
+
+$subtitleone       =  $_POST['subtiteleen'];
+$subsummaryone     =  $_POST['groteteksteen'];
+$subtitletwo       =  $_POST['subtiteltwee'];
+$subsummarytwo     =  $_POST['groteteksttwee'];
+$subtitlethree     =  $_POST['subtiteldrie'];
+$subsummarythree   =  $_POST['grotetekstdrie'];
+$subtitlefour      =  $_POST['subtitelvier'];
+$subsummaryfour    =  $_POST['grotetekstvier'];
+$subtitlefive      =  $_POST['subtitelvijf'];
+$subsummaryfive    =  $_POST['grotetekstvijf'];
+
  
 $author  	 	=  $_POST['author']; 
 $date = date("YmdHis");
@@ -95,8 +107,8 @@ $path = "../uploads/";
 
 $photos = serialize($photosarray);
 
-$sql = "INSERT INTO articles (smalltitle,smallsummary,img,bigtitle,bigsummary,moreimg,datee,author)
-VALUES ('$smalltitle','$smallsummary','$newfilename','$bigtitle','$bigsummary','$photos' ,'$datee' ,'$author')";
+$sql = "INSERT INTO articles (smalltitle,smallsummary,img,bigtitle,bigsummary,moreimg,datee,author,subtitleone,subsummaryone,subtitletwo,subsummarytwo,subtitlethree,subsummarythree,subtitlefour,subsummaryfour,subtitlefive,subsummaryfive)
+VALUES ('$smalltitle','$smallsummary','$newfilename','$bigtitle','$bigsummary','$photos' ,'$datee' ,'$author', '$subtitleone' , '$subsummaryone', '$subtitletwo' , '$subsummarytwo', '$subtitlethree' , '$subsummarythree', '$subtitlefour' , '$subsummaryfour', '$subtitlefive' , '$subsummaryfive')";
 
 $result = $mysqli->query($sql);
 

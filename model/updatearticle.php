@@ -12,7 +12,7 @@ $bigsummary  	=  $_POST['bigsummary'];
 $author  	 	=  $_POST['author']; 
 $articleid 	 	=  $_POST['id']; 
 
-$date = date("Y-m-d-H-i-s");
+$date = date("YmdHis");
 
 $error=array();
 
@@ -95,12 +95,12 @@ $path = "../uploads/";
 
 $photos = serialize($photosarray);
 
-$sql = "UPDATE articles (smalltitle,smallsummary,img,bigtitle,bigsummary,moreimg,datee,author) VALUES ('$smalltitle','$smallsummary','$newfilename','$bigtitle','$bigsummary','$photos' ,'$datee' ,'$author') WHERE id = $articleid";
+$sql = "UPDATE articles SET smalltitle = '$smalltitle' , smallsummary = '$smallsummary', img = '$newfilename', bigtitle = '$bigtitle', bigsummary = '$bigsummary', moreimg = '$photos', datee = '$datee', author = '$author' WHERE id = $articleid";
 
 $result = $mysqli->query($sql);
 
     
 
-header("Location: ../admin/admin.php");
+// header("Location: ../admin/admin.php");
 
 ?>
