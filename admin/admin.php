@@ -24,20 +24,41 @@ session_start();
 		</div>
 
 	</div>
-	<?php
+	
 
 
- echo "
+ 
 	<div class='col-md-8' id='add'>
 		<h3>Artikel toevoegen</h3>
 		<form method='POST' action='../model/newArticle.php' enctype='multipart/form-data'>
-		<input type='text' placeholder='title' name='smalltitle'>
-		<input type='text' placeholder='samenvating tekst' name='smallsummary'>
+		<input type='text' placeholder='kleinetitel' name='kleinetitel'>
+		<input type='text' placeholder='kleinesamenvating tekst' name='kleinesamenvatting'>
 		 <p>single image upload</p>
         <input type='file' name='filess[]' accept='image/*'>
         <br>
-		<input type='text' placeholder='titel' name='bigtitle'>
-		<input type='text' placeholder='grote tekst' name='bigsummary'>
+		<input type='text' placeholder='grotetitel' name='grotetitel'>
+		<input type='text' placeholder='grotetekst' name='grotetekst'>
+    <br>
+    <br>
+    <input type='text' placeholder='subtiteleen' name='subtiteleen'>
+    <input type='text' placeholder='groteteksteen' name='groteteksteen'>
+    <br>
+
+    <input type='text' placeholder='subtiteltwee' name='subtiteltwee'>
+    <input type='text' placeholder='groteteksttwee' name='groteteksttwee'>
+    <br>
+
+    <input type='text' placeholder='subtiteldrie' name='subtiteldrie'>
+    <input type='text' placeholder='grotetekstdrie' name='grotetekstdrie'>
+    <br>
+
+    <input type='text' placeholder='subtitelvier' name='subtitelvier'>
+    <input type='text' placeholder='grotetekstvier' name='grotetekstvier'>
+    <br>
+
+    <input type='text' placeholder='subtitelvijf' name='subtitelvijf'>
+    <input type='text' placeholder='grotetekstvijf' name='grotetekstvijf'>
+    <br>
 		 <p>Multiple image upload</p>
         <input type='file' name='files[]' multiple='multiple' accept='image/*'>
         <br><br>
@@ -50,7 +71,7 @@ session_start();
 		<div class='col-md-8' id='edit'>
 		
 		</div>";
-	?>
+	
 
 </div>
 
