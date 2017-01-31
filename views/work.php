@@ -22,7 +22,7 @@ echo'
       </div>	
 	<section id="works"></section>
 	<div class="container">
-		<div class="row centered mt mb">
+		<div class="row mt mb">
 			<div class="col-lg-8 col-lg-offset-2">
 				<h4>Verhaal nummero uno</h4>
 				<p>'.$row['smallsummary'].'</p>
