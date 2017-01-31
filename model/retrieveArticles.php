@@ -22,11 +22,12 @@ $id = $_GET['clicked'];
 		<br>
 		<input type='hidden' value='" . $row["author"] . "' name='author'>
 		<input type='hidden' value='" . $id . "' name='id'>
-		<input type='button' onClick='' value='delete'>
+		<input type='button' onClick='deleteArticle(" . $id . ")' value='delete'>
 		<input type='submit' value='aanpassen'>
 
 		</form>";
 
 	$row['id'];
+
 
 ?>
