@@ -3,11 +3,22 @@ include "../includes/config.php";
 
 $datee = date("Ymd");
 
-$smalltitle   	=  $_POST['smalltitle'];
-$smallsummary   =  $_POST['smallsummary']; 
+$smalltitle     =  $_POST['kleinetitel'];
+$smallsummary   =  $_POST['kleinesamenvatting']; 
 
-$bigtitle   	=  $_POST['bigtitle']; 
-$bigsummary  	=  $_POST['bigsummary'];
+$bigtitle       =  $_POST['grotetitel']; 
+$bigsummary     =  $_POST['grotetekst'];
+
+$subtitleone       =  $_POST['subtiteleen'];
+$subsummaryone     =  $_POST['groteteksteen'];
+$subtitletwo       =  $_POST['subtiteltwee'];
+$subsummarytwo     =  $_POST['groteteksttwee'];
+$subtitlethree     =  $_POST['subtiteldrie'];
+$subsummarythree   =  $_POST['grotetekstdrie'];
+$subtitlefour      =  $_POST['subtitelvier'];
+$subsummaryfour    =  $_POST['grotetekstvier'];
+$subtitlefive      =  $_POST['subtitelvijf'];
+$subsummaryfive    =  $_POST['grotetekstvijf'];
 
 $author  	 	=  $_POST['author']; 
 $articleid 	 	=  $_POST['id']; 
@@ -95,12 +106,35 @@ $path = "../uploads/";
 
 $photos = serialize($photosarray);
 
-$sql = "UPDATE articles SET smalltitle = '$smalltitle' , smallsummary = '$smallsummary', img = '$newfilename', bigtitle = '$bigtitle', bigsummary = '$bigsummary', moreimg = '$photos', datee = '$datee', author = '$author' WHERE id = $articleid";
+$sql = "UPDATE articles SET 
+smalltitle = '$smalltitle' , 
+smallsummary = '$smallsummary', 
+img = '$newfilename', 
+bigtitle = '$bigtitle', 
+bigsummary = '$bigsummary', 
+moreimg = '$photos', 
+datee = '$datee', 
+author = '$author', 
+subtitleone = '$subtitleone',
+subsummaryone = '$subsummaryone', 
+subtitletwo = '$subtitletwo', 
+subsummarytwo = '$subsummarytwo', 
+subtitlethree = '$subtitlethree',
+subsummarythree = '$subsummarythree', 
+subtitlefour = '$subtitlefour', 
+subsummaryfour = '$subsummaryfour', 
+subtitlefive = '$subtitlefive', 
+subsummaryfive = '$subsummaryfive' 
+
+WHERE id = $articleid";
+
+
+
 
 $result = $mysqli->query($sql);
 
     
 
-// header("Location: ../admin/admin.php");
+header("Location: ../admin/admin.php");
 
 ?>

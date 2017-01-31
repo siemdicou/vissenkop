@@ -7,8 +7,8 @@ $id = $_GET['clicked'];
 
 	echo "<h3>Artikel aanpassen</h3>
 	<form method='POST' action='../model/updatearticle.php' enctype='multipart/form-data'>
-		<input type='text' placeholder='kleinetitel' value='" . $row["smalltitle"] . "' name='smalltitle'>
-		<input type='text' placeholder='kleinesamenvating tekst' value='" . $row["smallsummary"] . "' name='smallsummary'>
+		<input type='text' placeholder='kleinetitel' value='" . $row["smalltitle"] . "' name='kleinetitel'>
+		<input type='text' placeholder='kleinesamenvating tekst' value='" . $row["smallsummary"] . "' name='kleinesamenvatting'>
 		<p>single image upload</p>
 
 		<input type='file' name='filess[]' accept='image/*'>
@@ -16,23 +16,24 @@ $id = $_GET['clicked'];
 
 		<img src=../uploads/". $row["img"] ." width='150px'>
 		<hr>
-		<input type='text' placeholder='grotetitel' value='" . $row["bigtitle"] . "' name='bigtitle'>
-		<input type='text' placeholder='grotetekst' value='" . $row["bigsummary"] . "' name='bigsummary'>
-
-		<input type='text' placeholder='subtiteleen' value='" . $row["subtitleone"] . "' name='subtitleone'>
-		<input type='text' placeholder='groteteksteen' value='" . $row["subsummaryone"] . "' name='subsummaryone'>
-
-		<input type='text' placeholder='subtiteltwo' value='" . $row["subtitletwo"] . "' name='subtitletwo'>
-		<input type='text' placeholder='groteteksttwo' value='" . $row["subsummarytwo"] . "' name='subsummarytwo'>
-
-		<input type='text' placeholder='subtitelthree' value='" . $row["subtitlethree"] . "' name='subtitlethree'>
-		<input type='text' placeholder='grotetekstthree' value='" . $row["subsummarythree"] . "' name='subsummarythree'>
-
-		<input type='text' placeholder='subtitelfour' value='" . $row["subtitlefour"] . "' name='subtitlefour'>
-		<input type='text' placeholder='grotetekstfour' value='" . $row["subsummaryfour"] . "' name='subsummaryfour'>
-
-		<input type='text' placeholder='subtitelfive' value='" . $row["subtitlefive"] . "' name='subtitlefive'>
-		<input type='text' placeholder='grotetekstfive' value='" . $row["subsummaryfive"] . "' name='subsummaryfive'>
+		<input type='text' placeholder='grotetitel' value='" . $row["bigtitle"] . "' name='grotetitel'>
+		<input type='text' placeholder='grotetekst' value='" . $row["bigsummary"] . "' name='grotetekst'>
+		<br>
+		<br>
+		<input type='text' placeholder='subtiteleen' value='" . $row["subtitleone"] . "' name='subtiteleen'>
+		<input type='text' placeholder='groteteksteen' value='" . $row["subsummaryone"] . "' name='groteteksteen'>
+		<br>
+		<input type='text' placeholder='subtiteltwo' value='" . $row["subtitletwo"] . "' name='subtiteltwee'>
+		<input type='text' placeholder='groteteksttwo' value='" . $row["subsummarytwo"] . "' name='groteteksttwee'>
+		<br>
+		<input type='text' placeholder='subtitelthree' value='" . $row["subtitlethree"] . "' name='subtiteldrie'>
+		<input type='text' placeholder='grotetekstthree' value='" . $row["subsummarythree"] . "' name='grotetekstdrie'>
+		<br>
+		<input type='text' placeholder='subtitelfour' value='" . $row["subtitlefour"] . "' name='subtitelvier'>
+		<input type='text' placeholder='grotetekstfour' value='" . $row["subsummaryfour"] . "' name='grotetekstvier'>
+		<br>
+		<input type='text' placeholder='subtitelfive' value='" . $row["subtitlefive"] . "' name='subtitelvijf'>
+		<input type='text' placeholder='grotetekstfive' value='" . $row["subsummaryfive"] . "' name='grotetekstvijf'>
 
 		<p>Multiple image upload</p>
 

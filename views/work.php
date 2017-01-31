@@ -28,6 +28,29 @@ echo'
 				<p>'.$row['smallsummary'].'</p>
 				<h4>groot verhaal</h4>
 				<p>'.$row['bigsummary'].'</p>
+				<h4>Verhaal nummero uno</h4>
+
+
+				<h2>'.$row['subtitleone'].'</h2>
+				
+				<p>'.$row['subsummaryone'].'</p>
+				
+				<h2>'.$row['subtitletwo'].'</h2>
+				
+				<p>'.$row['subsummarytwo'].'</p>
+				
+				<h2>'.$row['subtitlethree'].'</h2>
+				
+				<p>'.$row['subsummarythree'].'</p>
+				
+				<h2>'.$row['subtitlefour'].'</h2>
+				
+				<p>'.$row['subsummaryfour'].'</p>
+				
+				<h2>'.$row['subtitlefive'].'</h2>
+				
+				<h2>'.$row['subsummaryfive'].'</h2>
+
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 mt">
 				<img class="img-responsive" src="uploads/'.$row['img'].'">
