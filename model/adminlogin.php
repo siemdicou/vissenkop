@@ -21,9 +21,9 @@ include "../includes/config.php";
       if($count == 1) {
          // session_register("myusername");
          $_SESSION['login_user'] = $row["username"];
-         header("location: ../admin/admin.php");
+         header("location: ../index.php?page=admin");
       }else {
-         header("location: ../admin/index.php");
+         header("location: ../index.php?page=admin");
       }
    
 ?>
