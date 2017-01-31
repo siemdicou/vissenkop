@@ -18,13 +18,25 @@
 	<div class="container">
         <h1>Vissenkoppen</h1>
 		<div class="row centered mt mb">
-			
-				<div id="template_content"></div>
+		<?php foreach ($list as $row){
+        echo ' 
+   <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+				<a href="index.php?page=works&id='.$row["id"].'">
+					<img src="uploads/'. $row["img"] . '" class="img-responsive">
+                    <div id="containercontent">
+                        <h3 class="content_title">'.$row["smalltitle"].'</h3>
+                        <div class="content_article"><p>'.$row["smallsummary"].'</p></div>
+                        <div class="content_author">'.$row["author"].'</div>
+				 	<div class="content_author">'.$row["datee"].'</div>
+                    </div>
+				</a>
+	</div>';}
+				 ?>
 				
 		</div><!--/row -->
 	</div><!--/container -->
 	
-
+<?php include 'views/pagination.php'; ?>
 </section>
 	<div id="social">
 		<div class="container">

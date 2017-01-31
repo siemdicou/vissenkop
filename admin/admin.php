@@ -7,7 +7,7 @@ session_start();
 <html>
 <head>
 
-<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+<script src="../sweetalert-master/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
 
@@ -68,10 +68,45 @@ session_start();
 
 });
 
+function deleteArticle(productid){
+    console.log(productid);
 
-window.addEventListener('load', function() {
-     
         var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                  // console.log(productid + "het heeft gevist");
+                  articleList();
+            }
+        };
+
+
+
+                swal({
+                  title: "Are you sure?",
+                  text: "You will not be able to recover this imaginary file!",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonDisplay: 'inline',
+                  confirmButtonText: "Yes, delete it!",
+                  closeOnConfirm: false
+                },
+            function(){
+                xhttp.open("GET", "../model/deletquery.php?id=" + productid, true);
+                xhttp.send();  
+              swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            });
+      
+    // var clicked = document.getElementById("").click
+};
+window.addEventListener('load', function() {
+     articleList();
+
+    // var clicked = document.getElementById("").click
+}, false);
+
+function articleList() {
+            var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("articleList").innerHTML = xhttp.responseText;
@@ -79,9 +114,7 @@ window.addEventListener('load', function() {
         };
         xhttp.open("GET", "../model/getArticles_names.php", true);
         xhttp.send();
-    // var clicked = document.getElementById("").click
-}, false);
-
+}
 
 	function clickevent(clicked) {
 	getData(clicked);

@@ -1,6 +1,7 @@
 
 <?php
 // bepaald hoeveeel producten per pagina zichtbaar zijn
+include "../includes/config.php";
 $num_rec_per_page=5;
 
 if (isset($_GET["page_nr"])) {
@@ -11,7 +12,7 @@ if (isset($_GET["page_nr"])) {
 $start_from = ($page-1) * $num_rec_per_page;
 
 
-$sql = "SELECT * FROM vissenkop LIMIT ".$start_from.",". $num_rec_per_page;
+$sql = "SELECT * FROM articles LIMIT ".$start_from.",". $num_rec_per_page;
 $result = $mysqli->query($sql);
 if($result->num_rows > 0){
     while($rows = $result->fetch_assoc()){
@@ -20,7 +21,7 @@ if($result->num_rows > 0){
 }
 
 // bepaald hoeveel pages erin tottaal zijn
-$sql = "SELECT * FROM vissenkop";
+$sql = "SELECT * FROM articles";
 
 $rs_result = $mysqli->query($sql);
 
