@@ -27,10 +27,13 @@
 				<a href="index.php?page=works&id='.$row["id"].'">
 					<div class="imgcont"><img src="uploads/'. $row["img"] . '" class="img-responsive"></div>
                     <div id="containercontent">
+                    <div class="containercontent-cont">
                         <h3 class="content_title">'.$row["smalltitle"].'</h3>
                         <div class="content_article"><p>'.$row["smallsummary"].'</p></div>
                         <div class="content_author">'.$row["author"].'</div>
-				 	<div class="content_author">'.$row["datee"].'</div>
+                        <div class="content_author">'.$row["datee"].'</div>
+                    </div>
+                       
                     </div>
 				</a>
 	</div>';}

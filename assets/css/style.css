@@ -61,6 +61,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a4a4a;
 }
 
+p, div{
+	font-weight: 100;
+	color: #4a4a4a;
+}
 .navbar-header{
 	position:absolute;
 	right: 1em;
@@ -250,7 +254,7 @@ width: 150px;
 
 }
 
-.welcome .overlay{
+.overlay{
 	background: rgba(238,238,238,0.8);
 
 	-webkit-filter: blur(10px);
@@ -258,7 +262,7 @@ width: 150px;
 	-o-filter: blur(10px);
 	-ms-filter: blur(10px);
 	filter: blur(10px);	
-
+	z-index: 0;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -341,17 +345,55 @@ width: 150px;
 	margin-right: 21%;
 	max-width: 500px;
 }
+
+@media screen and (min-width: 320px){
 .imgcont{
+	width: 100%;
+	text-al
+}
+.img-responsive {
+	float: none;
+	margin-right: 0%;
+	max-width: 500px;
+	display: inline-block;
+}
+#containercontent {
+	position: relative;
+    float: none;
+	width: 400px;
+	margin: auto;
+	background: rgba(238,238,238,0.8);
+	padding: 2em;
+}
+}
+
+@media screen and (min-width: 960px){
+	.imgcont{
 	width: 420px;
 	height: auto;
 	overflow: hidden;
 	margin:0;
 	float: left;
-
+}
+.img-responsive {
+	float: left;
+	margin-right: 21%;
+	max-width: 500px;
+	display: block;
 }
 #containercontent {
-   float: right;
+	position: relative;
+   	float: right;
 	width: 400px;
+	margin: 2em;
+}
+}
+.containercontent-cont{
+/*	post absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;*/
 }
 
 .gallery {
@@ -395,20 +437,20 @@ height: 4em;
 #pagination-whole{
 	display: block;
 	text-align: center;
-	width: 20%;
+	width: auto;
 	padding: 1em;
 	background: #fff;
-	position: absolute;
+/*	position: absolute;
 	left: 0;
-	right: 0;
+	right: 0;*/
 	margin: auto;
 
 
 }
 #pagination-whole *{
 	color: #4a4a4a ;
-	padding-left: 2em;
-	padding-left: 2em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 	display: inline-block;
 }
 
