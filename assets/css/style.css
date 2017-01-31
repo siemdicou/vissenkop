@@ -61,9 +61,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a4a4a;
 }
 
+.navbar-header{
+	position:absolute;
+	right: 1em;
+}
+
+.contlogo{
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right:0;
+}
 
 .navbar-brand {
 	font-weight: 700;
+	position: relative;
 }
 .navbar-brand img{
     width: 120px;
@@ -74,15 +87,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-default {
-	background-color: rgba(255,255,255,0.7);
+/*	background-color: rgba(255,255,255,0.7);*/
+	background: transparent;
 	border-color: transparent;
+	position: absolute;
+	z-index: 999;
+	top:0;
+	left: 0;
+	right: 0;
 }
 .navbar-default .contactli{
 
-	position:absolute;
-	right: 0;
+/*	position:absolute;
+	right: 0;*/
 	display:table-cell;
     vertical-align: middle;
+    float: right;
 }
 .navbar-default .contactli a{
 	padding: 0;
@@ -121,24 +141,27 @@ width: 150px;
 
 .navbar-right{
 	position: relative;
-	float: left !important;
+	float: right !important;
+	width: 100%;
 }
 
 .works{
 	min-height:100vh;
+	position: relative;
+	overflow: hidden;
+	background: #eee url(../img/graat.svg) center;
+	background-size: 100% 50em;
 }
 .works .graatsvg{
 	position:absolute;
-	top:0
+	top:0;
 	left: 0;
 	right: 0;
-	bottom:0
+	bottom:0;
 	z-index: -1;
 	height: 100%;
 	width: 100%;
-	/*width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;*/
 }
-
 #headerwrap {
 	background: rgba(0,0,0,0.6);
 	margin-top: -70px;
@@ -277,10 +300,16 @@ width: 150px;
 	float: left;
 	margin-right: 21%;
 	max-width: 500px;
-	
+}
+.imgcont{
+	width: 300px;
+	height: auto;
+	overflow: hidden;
+	margin:0;
+
 }
 #containercontent {
-   float: left;
+   float: right;
 	width: 200px;
 }
 

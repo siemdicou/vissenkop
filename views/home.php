@@ -14,6 +14,7 @@
 
 <section id="works" class="works">
 <img class="graatsvg" src="assets/img/graat.svg" alt="graat">
+
 	<div class="container">
         <h1>Vissenkoppen</h1>
 		<div class="row centered mt mb">
