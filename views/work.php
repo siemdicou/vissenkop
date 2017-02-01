@@ -56,7 +56,8 @@ echo'
 
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 mt">
-				<img class="img-responsive" src="uploads/'.$row['img'].'">
+			<a href="uploads/' .$row["img"]. '" rel="lightbox['.$row["id"].']">
+				<img class="img-responsive" src="uploads/'.$row['img'].'"></a>
 				<br>';
 				$photoarray = unserialize($row["moreimg"]);
 				$countimage = count($photoarray);
