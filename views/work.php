@@ -16,7 +16,7 @@ echo'
 	<div id="workwrap">
 	    <div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-7 col-lg-offset-3">
 					<h1>'.$row['bigtitle'].'</h1>
 					<h4>Wijk: '.$row['wijk'].'</h4>
 				</div>
@@ -27,12 +27,7 @@ echo'
 	<section id="works"></section>
 	<div class="container">
 		<div class="row mt mb">
-			<div class="col-lg-8 col-lg-offset-2">
-				<h4>Verhaal nummero uno</h4>
-				<p>'.$row['smallsummary'].'</p>
-				<h4>groot verhaal</h4>
-				<p>'.$row['bigsummary'].'</p>
-				<h4>Verhaal nummero uno</h4>
+			<div class="col-md-6">
 
 				<h2>'.$row['subtitleone'].'</h2>
 				
@@ -55,15 +50,13 @@ echo'
 				<p>'.$row['subsummaryfive'].'</p>
 
 			</div>
-			<div class="col-lg-10 col-lg-offset-1 mt">
+			<div class="col-md-5 ">
 
             <div class="row">
             <div class="foto">
-         
-
-
-			<a href="uploads/' .$row["img"]. '" rel="lightbox['.$row["id"].']" title="' . $row['bigtitle'] . '">
-				<img class="img-responsive" src="uploads/'.$row['img'].'"></a>
+				<a href="uploads/' .$row["img"]. '" rel="lightbox['.$row["id"].']" title="' . $row['bigtitle'] . '">
+					<img class="img-responsive bigImg" src="uploads/'.$row['img'].'">
+					</a>
 				<br>';
 
 				$photoarray = unserialize($row["moreimg"]);
@@ -71,24 +64,17 @@ echo'
 
 				$count = 0;
 					while ($count < $countimage){
-						
-
-
-
-                        
 						echo '<a href="uploads/' . $photoarray[$count] . '" rel="lightbox['.$row["id"].']" title="' . $row['bigtitle'] . '"><img src="uploads/' . $photoarray[$count] . '" width="150" height="150" alt=""/></a>';
-
-
-						
 
 				$count++;
 					};
 				echo '
                 </div>
 			</div>
-			<div class="col-lg-8 col-lg-offset-2 mt">
-				<h4>ECHTER TOCH NOG</h4>
-				<br>
+			</div>
+			<div class="col-lg-8 mt">
+				
+				<br><Br><Br>
 				<p>'.$row['datee']. '  ' .$row['author'] .'</p>
 			</div>
 		</div><! --/row -->
@@ -105,6 +91,7 @@ echo'
     </body>
 </html>
 ';?>
+
 <!-- <a href="img/pl2.jpg" rel="lightbox[bergen]" title="foto van af veerpond"><img src="img/thumbs/pl2t.jpg" width="150" height="150" alt=""/></a>
 <a href="img/pl3.jpg" rel="lightbox[bergen]" title="water fall met brug"><img src="img/thumbs/pl3t.jpg" width="150" height="150" alt=""/></a>
 <a href="img/pl4.jpg" rel="lightbox[bergen]" title="berg vieuw fjord"><img src="img/thumbs/pl4t.jpg" width="150" height="150" alt=""/></a>

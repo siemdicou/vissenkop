@@ -33,7 +33,7 @@ $error=array();
 $valid_formats = array("jpg", "png", "gif", "zip", "bmp", "JPG", "jpeg");
 $max_file_size = 1024*6000; //100 kb
 // $path = "http://www.joeysteffens.com/Jennybakker/uploads/";
-$path = "../uploads/";
+$path = "uploads/";
  // Upload directory
 $count = 0;
 
@@ -73,7 +73,7 @@ $photosarray = array();
 extract($_POST);
 
 
-$path = "../uploads/";
+$path = "uploads/";
 
     $error=array();
     $extension=array("jpeg","jpg","png","gif");
