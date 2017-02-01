@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+// session_start(); 
  if (isset($_SESSION['login_user'])) {
 		?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -7,11 +7,11 @@ session_start();
 <html>
 <head>
 
-<script src="../sweetalert-master/dist/sweetalert.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../sweetalert-master/dist/sweetalert.css">
+<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 
-<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 
@@ -30,7 +30,7 @@ session_start();
  
 	<div class='col-md-8' id='add'>
 		<h3>Artikel toevoegen</h3>
-		<form method='POST' action='../model/newArticle.php' enctype='multipart/form-data'>
+		<form method='POST' action='model/newArticle.php' enctype='multipart/form-data'>
 		<input type='text' placeholder='kleinetitel' name='kleinetitel'>
 		<input type='text' placeholder='kleinesamenvating tekst' name='kleinesamenvatting'>
 		 <p>single image upload</p>
@@ -70,7 +70,7 @@ session_start();
 	</div>
 		<div class='col-md-8' id='edit'>
 		
-		</div>";
+		</div>
 	
 
 </div>
@@ -90,7 +90,7 @@ session_start();
 });
 
 function deleteArticle(productid){
-    console.log(productid);
+    // console.log(productid);
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -113,7 +113,7 @@ function deleteArticle(productid){
                   closeOnConfirm: false
                 },
             function(){
-                xhttp.open("GET", "../model/deletquery.php?id=" + productid, true);
+                xhttp.open("GET", "model/deletquery.php?id=" + productid, true);
                 xhttp.send();  
               swal("Deleted!", "Your imaginary file has been deleted.", "success");
             });
@@ -133,7 +133,7 @@ function articleList() {
                 document.getElementById("articleList").innerHTML = xhttp.responseText;
             }
         };
-        xhttp.open("GET", "../model/getArticles_names.php", true);
+        xhttp.open("GET", "model/getArticles_names.php", true);
         xhttp.send();
 }
 
@@ -159,9 +159,9 @@ function articleList() {
                  document.getElementById("edit").innerHTML = xhttp.responseText;
              }
          };
-         xhttp.open("GET", "../model/retrieveArticles.php?clicked=" + clicked, true);
+         xhttp.open("GET", "model/retrieveArticles.php?clicked=" + clicked, true);
          xhttp.send();
-        console.log(clicked);
+        // console.log(clicked);
      };
 
 
