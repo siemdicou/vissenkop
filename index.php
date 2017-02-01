@@ -1,18 +1,6 @@
 
 <?php
-// dit include de files die niet via de switch worden geladen op de site.
 include "includes/config.php";
-
-
-// include "controller/products.php";
-
-
-
-
-
-// hier wordt de page en product id uit de url geladen
-// zodat ze gebruikt kunnen worden in een van de files below
-
 $page = (empty($_GET ['page'])) ? '' : $_GET['page'];
 switch($page){
     case 'home':
@@ -43,8 +31,8 @@ switch($page){
 
 
     default:
-    include "views/header.php";
-    require 'model/getArticles.php';
+        include "views/header.php";
+        require 'model/getArticles.php';
         include "views/home.php";
     break;
 }

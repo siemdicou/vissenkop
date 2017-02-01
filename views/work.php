@@ -1,4 +1,8 @@
+<link rel="stylesheet" type="text/css" href="2/css/lightbox.css">
+<script src="2/js/jquery-1.11.0.min.js"></script>
+<script src="2/js/lightbox.js"></script>
 <?php 
+
 $id = (empty($_GET ['id'])) ? '' : $_GET['id'];    
 // var_dump($id);
 
@@ -29,7 +33,6 @@ echo'
 				<h4>groot verhaal</h4>
 				<p>'.$row['bigsummary'].'</p>
 				<h4>Verhaal nummero uno</h4>
-
 
 				<h2>'.$row['subtitleone'].'</h2>
 				
@@ -62,7 +65,9 @@ echo'
 					while ($count < $countimage){
 						
 
-						echo "<img src='uploads/" . $photoarray[$count] . "' width='20%'> ";
+						echo '<a href="uploads/' . $photoarray[$count] . '" rel="lightbox['.$row["id"].']"><img src="uploads/' . $photoarray[$count] . '" width="150" height="150" alt=""/></a>';
+
+						
 
 				$count++;
 					}
@@ -87,3 +92,8 @@ echo'
     </body>
 </html>
 ';?>
+<!-- <a href="img/pl2.jpg" rel="lightbox[bergen]" title="foto van af veerpond"><img src="img/thumbs/pl2t.jpg" width="150" height="150" alt=""/></a>
+<a href="img/pl3.jpg" rel="lightbox[bergen]" title="water fall met brug"><img src="img/thumbs/pl3t.jpg" width="150" height="150" alt=""/></a>
+<a href="img/pl4.jpg" rel="lightbox[bergen]" title="berg vieuw fjord"><img src="img/thumbs/pl4t.jpg" width="150" height="150" alt=""/></a>
+<a href="img/pl5.jpg" rel="lightbox[bergen]" title="overzicht binnen land van noorwegen"><img src="img/thumbs/pl5t.jpg" width="150" height="150" alt=""/></a>
+<a href="img/pl6.jpg" rel="lightbox[bergen]" title="naar buiten stormende water van een glatsjer"><img src="img/thumbs/pl6t.jpg" width="150" height="150" alt=""/></a> -->
