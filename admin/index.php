@@ -5,6 +5,8 @@
     <script src="sweetalert-master/dist/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+
 <style type="text/css">
 
 </style>
@@ -19,7 +21,7 @@ session_start();
 // $bla = isset($_SESSION['login_user']);
 
  if (isset($_SESSION['login_user'])) {
-		include 'admin/admin.php';
+		include 'admin.php';
 	}
 else{
 	?>

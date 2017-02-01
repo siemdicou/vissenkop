@@ -112,6 +112,6 @@ VALUES ('$smalltitle','$smallsummary','$newfilename','$bigtitle','$bigsummary','
 
 $result = $mysqli->query($sql);
 
-header("Location: ../admin/admin.php");
+header("Location: ../index.php?page=admin");
 
 ?>
