@@ -25,27 +25,28 @@ switch($page){
         include "views/about.php";
         break;
    case'works':
-  include "views/header.php";
+        include "views/header.php";
         include "views/work.php" ;
-        break;
-        include "views/header.php";
+    break;
+        
     case 'contact':
-        include "views/contact.php";
-        break;
         include "views/header.php";
+        include "views/contact.php";
+    break;
     case 'articles':
-    include "views/articles.php";
-        break;
-        case 'admin':
+        include "views/header.php";
+        include "views/articles.php";
+    break;
+    case 'admin':
         include "admin/index.php";
-        break;
+    break;
 
 
     default:
+    include "views/header.php";
     require 'model/getArticles.php';
-    include "views/home.php";
-
-        break;
+        include "views/home.php";
+    break;
 }
 include 'views/footer.php';
 ?>
