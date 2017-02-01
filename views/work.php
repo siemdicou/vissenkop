@@ -56,8 +56,13 @@ echo'
 
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 mt">
+            <div class="row">
+            <div class="foto">
+         
 				<img class="img-responsive" src="uploads/'.$row['img'].'">
-				<br>';
+                </div>
+				<br>
+               ';
 				$photoarray = unserialize($row["moreimg"]);
 				$countimage = count($photoarray);
 
@@ -65,13 +70,16 @@ echo'
 					while ($count < $countimage){
 						
 
-						echo '<a href="uploads/' . $photoarray[$count] . '" rel="lightbox['.$row["id"].']"><img src="uploads/' . $photoarray[$count] . '" width="150" height="150" alt=""/></a>';
+						echo '
+                     
+                        <a href="uploads/' . $photoarray[$count] . '" rel="lightbox['.$row["id"].']"><img src="uploads/' . $photoarray[$count] . '" width="150" height="150" alt=""/></a>';
 
 						
 
 				$count++;
 					}
 				echo '
+                </div>
 			</div>
 			<div class="col-lg-8 col-lg-offset-2 mt">
 				<h4>ECHTER TOCH NOG</h4>
