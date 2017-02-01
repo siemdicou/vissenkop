@@ -43,4 +43,5 @@ switch($page){
 
         break;
 }
+include 'views/footer.php';
 ?>

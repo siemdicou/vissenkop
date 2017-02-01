@@ -1,3 +1,22 @@
+<div id="social">
+		<div class="container">
+			<div class="row centered">
+				
+				<div class="col-lg-4">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</div>
+				<div class="col-lg-4">
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+				<div class="col-lg-4">
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+				
+			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
 <div id="footerwrap">
 		<div class="container">
 			<div class="row centered">
