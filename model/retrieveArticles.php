@@ -6,7 +6,7 @@ $id = $_GET['clicked'];
 	$row = $result->fetch_assoc();
 
 	echo "<h3>Artikel aanpassen</h3>
-	<form method='POST' action='../model/updatearticle.php' enctype='multipart/form-data'>
+	<form method='POST' action='model/updatearticle.php' enctype='multipart/form-data'>
 		<input type='text' placeholder='kleinetitel' value='" . $row["smalltitle"] . "' name='kleinetitel'>
 		<input type='text' placeholder='kleinesamenvating tekst' value='" . $row["smallsummary"] . "' name='kleinesamenvatting'>
 		<p>single image upload</p>
@@ -14,7 +14,7 @@ $id = $_GET['clicked'];
 		<input type='file' name='filess[]' accept='image/*'>
 		<br>
 
-		<img src=../uploads/". $row["img"] ." width='150px'>
+		<img src=uploads/". $row["img"] ." width='150px'>
 		<hr>
 		<input type='text' placeholder='grotetitel' value='" . $row["bigtitle"] . "' name='grotetitel'>
 		<input type='text' placeholder='grotetekst' value='" . $row["bigsummary"] . "' name='grotetekst'>
@@ -47,7 +47,7 @@ $count = 0;
 	while ($count < $countimage){
 		
 
-		echo "<img src='../uploads/" . $photoarray[$count] . "'width='150px'>";
+		echo "<img src='uploads/" . $photoarray[$count] . "'width='150px'>";
 
 $count++;
 	}

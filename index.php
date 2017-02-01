@@ -2,7 +2,7 @@
 <?php
 // dit include de files die niet via de switch worden geladen op de site.
 include "includes/config.php";
-include "views/header.php";
+
 
 // include "controller/products.php";
 
@@ -16,32 +16,37 @@ include "views/header.php";
 $page = (empty($_GET ['page'])) ? '' : $_GET['page'];
 switch($page){
     case 'home':
+    include "views/header.php";
     require 'model/getArticles.php';
     include "views/home.php";
         break;
             case 'about':
+            include "views/header.php";
         include "views/about.php";
         break;
    case'works':
-  
+        include "views/header.php";
         include "views/work.php" ;
-        break;
+    break;
+        
     case 'contact':
+        include "views/header.php";
         include "views/contact.php";
-        break;
+    break;
     case 'articles':
-    include "views/articles.php";
-        break;
-        case 'admin':
+        include "views/header.php";
+        include "views/articles.php";
+    break;
+    case 'admin':
         include "admin/index.php";
-        break;
+    break;
 
 
     default:
+    include "views/header.php";
     require 'model/getArticles.php';
-    include "views/home.php";
-
-        break;
+        include "views/home.php";
+    break;
 }
 include 'views/footer.php';
 ?>
