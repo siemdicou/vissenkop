@@ -77,7 +77,17 @@ p, div{
 	left: 0;
 	width: 50%;
 }
+@media screen and (min-width: 320px){
+.navbar-brand {
+	font-weight: 700;
+	position: relative;
+}
+.navbar-brand img{
+    width: 70px;
+}
+}
 
+@media screen and (min-width: 960px){
 .navbar-brand {
 	font-weight: 700;
 	position: relative;
@@ -85,6 +95,9 @@ p, div{
 .navbar-brand img{
     width: 120px;
 }
+}
+
+
 
 .navbar-default .navbar-brand {
 	color: #1abc9c;
@@ -149,12 +162,23 @@ width: 150px;
 	width: 100%;
 }
 
+@media screen and (min-width: 320px){
+.works{
+	min-height:100vh;
+	position: relative;
+	overflow: hidden;
+	background: #eee url(../img/graat.svg) center;
+	background-size: 100% 32em;
+}
+}
+@media screen and (min-width: 960px){
 .works{
 	min-height:100vh;
 	position: relative;
 	overflow: hidden;
 	background: #eee url(../img/graat.svg) center;
 	background-size: 100% 50em;
+}
 }
 .works .graatsvg{
 	position:absolute;
@@ -166,15 +190,28 @@ width: 150px;
 	height: 100%;
 	width: 100%;
 }
+@media screen and (min-width: 320px){
 #headerwrap {
 	background: rgba(0,0,0,0.6);
-	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
-	min-height: 40vh;
+	min-height: 200px;
 	width: 100%;
 	position:relative;
 }
+}
+
+@media screen and (min-width: 960px){
+#headerwrap {
+	background: rgba(0,0,0,0.6);
+	padding-top: 250px;
+	text-align:center;
+	min-height: 400px;
+	width: 100%;
+	position:relative;
+}
+}
+
 
 #headerwrap h1 {
 	color:#ffffff;
@@ -231,28 +268,55 @@ width: 150px;
 }
 
 /* Welcome */
-
+@media screen and (min-width: 320px){
 .welcome h1{
 	position: absolute;
 	left:0 ;
 	right:0 ;
 	top: 0;
 	width: 100%;
-	font-size: 3em;
+	font-size: 2em;
 	text-transform: uppercase;
 	padding-top: 20px;
 	z-index: 999;
 }
-
+}
+@media screen and (min-width: 960px){
+.welcome h1{
+	font-size: 3em;
+}
+}
 .welcome{
 	position: relative;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
 	padding: 2em;
+	padding: 2em;
 	min-height: 7em;
 
 }
+.contact{
+    align-content: center;
+    text-align: center;
+    
+
+}
+
+.contact h1{
+    align-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-left: 2%;
+    
+    
+}
+.contacttext{
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+
 
 .overlay{
 	background: rgba(238,238,238,0.8);
@@ -337,24 +401,25 @@ width: 150px;
 
 
 /* Gallery */
-
-
-
-.img-responsive {
-	float: left;
-	margin-right: 21%;
-	max-width: 500px;
+.img-responsive{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+        margin: 0 auto;
 }
 
 @media screen and (min-width: 320px){
 .imgcont{
 	width: 100%;
-	text-al
+	height: 300px;
+	position:relative;
 }
 .img-responsive {
 	float: none;
-	margin-right: 0%;
-	max-width: 500px;
+	min-width: 300px;
+	height: 100%;
 	display: inline-block;
 }
 #containercontent {
@@ -364,22 +429,28 @@ width: 150px;
 	margin: auto;
 	background: rgba(238,238,238,0.8);
 	padding: 2em;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 }
 
 @media screen and (min-width: 960px){
 	.imgcont{
 	width: 420px;
-	height: auto;
+	height: 300px;
 	overflow: hidden;
 	margin:0;
 	float: left;
+	position:relative;
 }
 .img-responsive {
 	float: left;
-	margin-right: 21%;
-	max-width: 500px;
+	min-width: 420px;
+	height: 100%;
 	display: block;
+
 }
 #containercontent {
 	position: relative;
