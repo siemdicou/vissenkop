@@ -1,6 +1,6 @@
 <?php 
 $id = (empty($_GET ['id'])) ? '' : $_GET['id'];    
-var_dump($id);
+// var_dump($id);
 
 	$result = $mysqli->query("SELECT * FROM articles WHERE id = '$id'");
 	
@@ -14,7 +14,7 @@ echo'
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
 					<h1>'.$row['bigtitle'].'</h1>
-					<h4>Beroep: '.$row['beroep'].'</h4>
+					<h4>Wijk: '.$row['wijk'].'</h4>
 				</div>
 			</div><!--/row -->
 	    </div> <!-- /container -->
@@ -49,7 +49,7 @@ echo'
 				
 				<h2>'.$row['subtitlefive'].'</h2>
 				
-				<h2>'.$row['subsummaryfive'].'</h2>
+				<p>'.$row['subsummaryfive'].'</p>
 
 			</div>
 			<div class="col-lg-10 col-lg-offset-1 mt">

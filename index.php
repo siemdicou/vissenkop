@@ -30,7 +30,7 @@ switch($page){
         include "views/contact.php";
         break;
     case 'articles':
-        include "views/articles.php";
+    include "views/articles.php";
         break;
         case 'admin':
         include "admin/index.php";
