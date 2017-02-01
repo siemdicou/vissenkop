@@ -250,9 +250,31 @@ width: 150px;
 	margin: 0 auto;
 	text-align: center;
 	padding: 2em;
+	padding: 2em;
 	min-height: 7em;
 
 }
+.contact{
+    align-content: center;
+    text-align: center;
+    
+
+}
+
+.contact h1{
+    align-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-left: 2%;
+    
+    
+}
+.contacttext{
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+}
+
 
 .overlay{
 	background: rgba(238,238,238,0.8);
