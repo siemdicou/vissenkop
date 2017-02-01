@@ -1,7 +1,7 @@
 <?php
 include "../includes/config.php";
 
-$datee = date("Ymd");
+$datee = date("d-m-Y");
 
 $smalltitle   	=  $_POST['kleinetitel'];
 $smallsummary   =  $_POST['kleinesamenvatting']; 

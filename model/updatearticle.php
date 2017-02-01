@@ -1,7 +1,7 @@
 <?php 
 include "../includes/config.php";
 
-$datee = date("Ymd");
+$datee = date("d-m-Y");
 
 $smalltitle     =  $_POST['kleinetitel'];
 $smallsummary   =  $_POST['kleinesamenvatting']; 
@@ -135,6 +135,6 @@ $result = $mysqli->query($sql);
 
     
 
-header("Location: ../admin/admin.php");
+header("Location: ../index.php?page=admin");
 
 ?>
