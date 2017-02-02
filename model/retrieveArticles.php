@@ -54,13 +54,10 @@ $count++;
 
 
 
-echo "
-		<br>
-		<br>
-
-		<input type='hidden' value='" . $row["img"] . "' name='databaseimg'>
+echo "	<input type='hidden' value='" . $row["img"] . "' name='databaseimg'>
 		<input type='hidden' value='" . $row["moreimg"] . "' name='databasephotos'>
-
+		<br>
+		<br>
 		<input type='hidden' value='" . $row["author"] . "' name='author'>
 		<input type='hidden' value='" . $id . "' name='id'>
 		<input type='button' onClick='deleteArticle(" . $id . ")' value='delete'>
