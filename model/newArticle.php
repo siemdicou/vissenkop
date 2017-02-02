@@ -22,7 +22,7 @@ $subsummaryfive    =  $_POST['grotetekstvijf'];
 
  
 $author  	 	=  $_POST['author']; 
-$date = date("YmdHis");
+$date = date("YmdHi");
 
 
 $error=array();
